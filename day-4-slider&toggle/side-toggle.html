@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <style>
+        aside{
+            width: 300px;
+            transition: all 0.3s linear;
+        }
+        .deactive-aside{
+            width: 60px;
+            transition: all 0.3s linear;
+        }
+        .navbar{
+            width: calc(100% - 300px);
+            transition: all 0.3s linear;
+        }
+        .active-navbar{
+            width: calc(100% - 60px);
+            transition: all 0.3s linear;
+        }
+        main{
+            width: calc(100% - 300px);
+            transition: all 0.3s linear;
+        }
+        .deactive-main{
+            width: calc(100% - 60px);
+            transition: all 0.3s linear;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar ms-auto bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-jq-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <aside class="bg-secondary position-fixed start-0 bottom-0 top-0">
+    </aside>
+    <main class="ms-auto">
+        <div class="container-fluid bg-secondary-subtle">
+            <div class="row">
+                <div class="col-12">
+                    <div class="p-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum accusamus eum nostrum quae molestias voluptas hic perspiciatis ducimus nesciunt, dignissimos minima corrupti recusandae, iusto, rem velit beatae iure at!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-jq-toggle="collapse"]').on('click', function(){
+                $('aside').toggleClass('deactive-aside');
+                $('.navbar').toggleClass('active-navbar');
+                $('main').toggleClass('deactive-main');
+            })
+        })
+    </script>
+
+</body>
+
+</html>

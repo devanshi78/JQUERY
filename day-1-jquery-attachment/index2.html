@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggler">Toggler</button>
+    <button id="fadeout">Fade out</button>
+    <button id="fadein">Fade IN</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="fadeTo">Fade To</button>
+    <p id="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, voluptates. Non repellat debitis porro. Quasi illum, repellendus nihil labore suscipit blanditiis mollitia qui veritatis soluta! Illum quisquam adipisci consequatur odit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci aliquid ullam, beatae quas sed nihil, ipsam suscipit vero possimus praesentium odio velit voluptatem dolor accusamus nostrum harum molestiae. Tempore, beatae.</p>
+
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:blue;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:green;"></div><br>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#hide').on('click',function(){
+                $('#text').hide();
+            });
+            $('#show').on('click',function(){
+                $('#text').show();
+            });
+            $('#toggler').on('click',function(){
+                $('#text').toggle();
+            })
+            $('#fadeout').on('click',function(){
+                $('#text').fadeOut();
+            })
+            $('#fadein').on('click',function(){
+                $('#text').fadeIn();
+            })
+            $('#fadeToggle').on('click',function(){
+                $('#text').fadeToggle();
+            })
+            $('#fadeTo').on('click',function(){
+                $('#div1').fadeTo("slow", 0.15);
+                $('#div2').fadeTo("slow", 0.4);
+                $('#div3').fadeTo("slow", 0.7);
+            })
+        })
+    </script>
+</body>
+</html>

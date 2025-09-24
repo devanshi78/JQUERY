@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div style="border: 1px solid black; margin: 0 auto; border-radius: 3px; margin-bottom: 20px; width: 400px;">
+            <a href="#" id="accordian"
+                style="text-decoration: none; color: #008374; border-bottom: 1px solid  black; display: block; padding: 5px;">1.Non
+                consectetur a erat nam at lectus urna duis?</a>
+            <div id="text">
+                <p style="padding: 10px;">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
+                    laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
+                    non.</p>
+            </div>
+        </div>
+
+        <div style="border: 1px solid black; margin: 0 auto; border-radius: 3px;margin-bottom: 20px; width: 400px;">
+            <a href="#" id="accordian2"
+                style="text-decoration: none; color: #008374; border-bottom: 1px solid  black; display: block; padding: 5px;">2.Feugiat
+                scelerisque varius morbi enim nunc faucibus a pellentesque?</a>
+            <div id="text2">
+                <p style="padding: 10px;">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
+                    interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
+                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
+                    tincidunt dui.</p>
+            </div>
+        </div>
+
+        <div style="border: 1px solid black; margin: 0 auto; border-radius: 3px; width: 400px;">
+            <a href="#" id="accordian3"
+                style="text-decoration: none; color: #008374; border-bottom: 1px solid  black; display: block; padding: 5px;">3.Dolor
+                sit amet consectetur adipiscing elit pellentesque?</a>
+            <div id="text3">
+                <p style="padding: 10px;">Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
+                    Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
+                    tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
+                    elementum eu facilisis sed odio morbi quis</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#accordian').on('click', function () {
+                $('#text').slideToggle();
+            })
+            $('#accordian2').on('click', function () {
+                $('#text2').slideToggle();
+            })
+            $("#accordian3").on('click',function(){
+                $('#text3').slideToggle();
+            })
+        });
+    </script>
+</body>
+
+</html>

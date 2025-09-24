@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center my-4">
+            <div class="col-md-6 card p-4">
+                <button id="clickbtn" class="btn btn-primary w-50 align-self-center mb-3">Click Me</button>
+                <p class="text-center" id="text1" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt perferendis exercitationem officia
+                    beatae
+                    aspernatur! Itaque, aut, iure architecto totam voluptates, perspiciatis aliquid exercitationem
+                    voluptatibus
+                    quidem deserunt illo? Cum, asperiores eos.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+
+    <script src="./bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#clickbtn').on('click',function () {
+                $('#text1').toggle();
+            })
+        })
+    </script>
+</body>
+
+</html>

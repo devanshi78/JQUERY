@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <div class="card" style="background-color: teal; padding: 20px; width: 300px; display: none;" id="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Pariatur harum vitae odio non voluptate nobis excepturi. <br> Possimus eveniet impedit quibusdam, a, minus, cupiditate <br> perferendis reprehenderit in nemo iure qui quam. Lorem,<br> ipsum dolor sit amet consectetur adipisicing elit. Amet <br> iure quos, hic commodi placeat, quidem veritatis repudiandae <br> quod veniam ducimus, maiores exercitationem cupiditate! <br> Vero, architecto corporis neque perspiciatis quam ab?</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#start').on('click', function () {
+                $('#box1').hide();
+                $('#box1').slideDown(5000);
+            })
+            $('#stop').on('click', function () {
+                $('#box1').stop();
+            })
+        })
+    </script>
+</body>
+
+</html>

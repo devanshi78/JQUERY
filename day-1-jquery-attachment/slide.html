@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="slideup">Slide UP</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="toggler">Slide Toggler</button>
+
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:blue;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:green;"></div><br>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#slideup').on('click',function(){
+                $('#div1').slideUp();
+                $('#div2').slideUp();
+                $('#div3').slideUp();
+            })
+            $('#slidedown').on('click',function(){
+                $('#div1').slideDown();
+                $('#div2').slideDown();
+                $('#div3').slideDown();
+            })
+            $('#toggler').on('click',function(){
+                $('#div1').slideToggle();
+                $('#div2').slideToggle();
+                $('#div3').slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>
